@@ -68,6 +68,11 @@ FROM students
 20.select count(points>500)
 FROM students
 
-21.
+21.SELECT name FROM students
+WHERE name LIKE '%s%';
+
+22.select * from students
+order by Points desc
+
 
 
