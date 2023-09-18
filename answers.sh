@@ -22,3 +22,52 @@ WHERE name="Basma"
 set points=points-100
 WHERE name="Alex"
 
+8.CREATE TABLE graduates (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    Name TEXT NOT NULL UNIQUE,
+    Age INTEGER,
+    Gender TEXT,
+    Points INTEGER,
+    Graduation DATE
+);
+
+10.INSERT INTO graduates (id, name, age,Gender, Points)
+SELECT id, name, age,Gender,Points
+FROM students
+WHERE name='Layal'
+
+11.UPDATE  graduates
+set Graduation='08/09/2018'
+WHERE name='Layal'
+
+12.DELETE FROM students WHERE name='Layal';
+
+14.SELECT employees.name, employees.Company, companies.Date
+FROM employees
+ JOIN companies ON employees.Company=companies.Name;
+
+15.SELECT Name from
+(SELECT employees.name, employees.Company, companies.Date
+FROM employees
+ JOIN companies ON employees.Company=companies.Name)
+ where Date<2000
+
+16.SELECT company from
+(SELECT employees.name, employees.Role,employees.Company, companies.Date
+FROM employees
+ JOIN companies ON employees.Company=companies.Name)
+ where Role="Graphic Designer"
+
+
+18.select name ,max(points)
+FROM students
+
+19. select avg(points)
+FROM students
+
+20.select count(points>500)
+FROM students
+
+21.
+
+
